@@ -1,0 +1,204 @@
+* {
+    margin: 0%;
+}
+/*zzzzzzzzzzzzzz css slider zzzzzzzzzzzzzz */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slider img:nth-child(1) {
+    animation: slide 15s ease-in-out infinite;
+}
+.slider img:nth-child(2) {
+    animation: slide 15s ease-in-out infinite 5s;
+}
+.slider img:nth-child(3) {
+    animation: slide 15s ease-in-out infinite 10s;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    6.66% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+/*zzzzzzzzzzzzzz css slider zzzzzzzzzzzzzz */
+.main-header img {
+    width: 100%;
+    height: 300px;
+}
+@media screen and (max-width: 768px) {
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #5a5757;
+        height: 100%;
+    }
+    .footer1 {
+        width: 100%;
+        margin-left: 25px;
+    }
+    .main-header img {
+        width: 100%;
+        height: 300px;
+    }
+}
+.main-header {
+    position: relative;
+    z-index: -1;
+}
+.exam-room {
+    position: absolute;
+    top: 180px;
+    /* left: 500px; */
+    left: 43%;
+    background-color: #5a5757;
+    padding: 10px 15px;
+    border-radius: 40px;
+    z-index: 1;
+}
+.exam-room a {
+    color: white;
+}
+.exam-room:hover {
+    background-color: #ffffff;
+    /* color: rgb(30, 8, 8); */
+}
+.exam-room:hover a {
+    color: #555;
+}
+.socialMedia {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    /* height: 100px; */
+    border: 3px solid #73AD21;
+}
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+.fa {
+    padding: 10px;
+    font-size: 10px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+/* =========================top header */
+ul {
+    display: flex;
+    list-style: none;
+    background-color: black;
+    color: white;
+    height: 50px;
+    align-items: center;
+}
+ul ul {
+    position: absolute;
+    right: 50px;
+    justify-content: flex-end;
+}
+ul ul li {
+    margin: 0px 10px;
+}
+.tlogo {
+    padding: 25px;
+    background-color: rgb(1, 153, 102);
+    margin: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.zfooter {
+    display: flex;
+}
+.zfooter1 {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .tlogo {
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+    ul ul {
+        right: 20px;
+    }
+    .zfooter {
+        display: flex;
+        flex-direction: column;
+    }
+    .exam-room {
+        left: 35%;
+    }
+}
+/* =========================product design */
+.product-card {
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 30px;
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+.product-price {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 10px;
+}
+.prduct-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
