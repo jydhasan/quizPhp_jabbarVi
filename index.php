@@ -1,7 +1,12 @@
 <?php
 session_start();
 // Check if the 'phone' session variable is set
-    $phone = $_SESSION['phone'];
+    // $phone = $_SESSION['phone'];
+    if (isset($_SESSION['phone'])) {
+        $phone = $_SESSION['phone'];
+    } else {
+        // $phone = null;
+    }
 // Include database connection
 require "dbconn.php";
 // Check if the database connection is successful
@@ -131,11 +136,10 @@ while ($row = mysqli_fetch_array($result)) {
     </div>
 
 <br>
-
     <div class="zfooter" style="background-color: #f2f2f2;">
         <div class="zfooter1" style="padding: 10px;">
             <h1>Admin </h1>
-            <a href="app/admin.php">Admin</a>
+            <a href="app/admincheck.php">Admin</a>
             <h4>OR</h4>
         <!-- Add this link/button anywhere in your HTML form -->
 <a href="app/logout.php">Logout</a>

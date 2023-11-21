@@ -16,6 +16,7 @@
             <li><a href="../excel/upload.php">Quiz Upload</a></li>
             <li><a href="quizList.php">Quiz List</a></li>
             <li><a href="bookUpload.php">Books</a></li>
+            <li><a href="booklist.php">Booklist</a></li>
             <li><a href="notice.php">Notice</a></li>
             <li><a href="studentslist.php">Students</a></li>
         </ul>

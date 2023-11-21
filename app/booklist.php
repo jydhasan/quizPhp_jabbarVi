@@ -1,7 +1,7 @@
 <?php
 require "../dbconn.php";
 // Fetch data from questionlist
-$query = "SELECT * FROM questionlist";
+$query = "SELECT * FROM books";
 $result = mysqli_query($db_conn, $query);
 $quizNotice = array();
 ?>
@@ -69,29 +69,21 @@ $quizNotice = array();
     <caption><h2>Quiz list</h2></caption>
     <thead>
         <tr>
-            <th>Question Title</th>
-            <th>Question Time</th>
-            <th>Question Start</th>
-            <th>Question Table Name</th>
-            <th>Result Table Name</th>
-            <th>Registration Date</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>pdf</th>
             <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <?php while ($row = mysqli_fetch_array($result)): ?>
             <tr>
-                <td><?php echo $row['qtitle']; ?></td>
-                <td><?php echo $row['qtime']; ?></td>
-                <td>
-                    <a href="qstart.php?qstart=<?php echo urlencode($row['qstart']); ?>&qtablename=<?php echo urlencode($row['qtablename']); ?>">
-                        <?php echo $row['qstart']; ?>
-                    </a>
-                </td>
-                <td><?php echo $row['qtablename']; ?></td>
-                <td><a href="result_table.php?qresulttable=<?php echo urlencode($row['qresulttable']); ?>"><?php echo $row['qresulttable']; ?></a></td>
-                <td><?php echo $row['reg_date']; ?></td>
-                <td><a href="deletequiz.php?id=<?php echo urlencode($row['id']); ?>"><?php echo $row['id']; ?></a></td>
+                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['price']; ?></td>
+                <td><?php echo $row['image']; ?></td>
+                <td><?php echo $row['file']; ?></td>
+                <td><a href="deletebook.php?id=<?php echo urlencode($row['id']); ?>"><?php echo $row['id']; ?></a></td>
             </tr>
         <?php endwhile; ?>
     </tbody>
